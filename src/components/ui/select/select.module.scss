@@ -1,0 +1,102 @@
+.SelectTrigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 2px;
+  padding: 6px 10px 6px 12px;
+  height: 35px;
+  gap: 5px;
+  background-color: var(--color-dark-900);
+  border: 1px solid var(--color-dark-300);
+  width: 210px;
+  outline: none;
+}
+
+.SelectTrigger:hover:not(:disabled) {
+  background-color: var(--color-dark-500);
+  cursor: pointer;
+}
+
+.SelectTrigger:focus {
+  border: 2px solid var(--color-info-700);
+}
+
+.SelectTrigger:disabled {
+  border-color: var(--color-dark-300);
+  color: var(--color-dark-300);
+}
+
+.SelectTrigger[data-state='open'] {
+  border-radius: 2px 2px 0 0;
+
+  .SelectIcon {
+    transform: rotate(0.5turn);
+  }
+}
+
+.SelectIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s all ease;
+}
+
+.SelectContent {
+  overflow: hidden;
+  background-color: inherit;
+  border-radius: 0 0 2px 2px;
+  border: 1px solid var(--color-dark-300);
+  width: 210px;
+  border-top: none;
+}
+
+.SelectItem {
+  display: flex;
+  align-items: center;
+  padding: 6px 0 6px 11px;
+  position: relative;
+  user-select: none;
+}
+
+.SelectItem[data-disabled] {
+  pointer-events: none;
+}
+.SelectItem[data-highlighted] {
+  outline: none;
+  background-color: var(--color-accent-900);
+  color: var(--color-accent-300);
+}
+
+.SelectLabel {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--color-dark-100)
+}
+
+.SelectLabelDisabled {
+    color: var(--color-dark-300)
+}
+
+.SelectSeparator {
+  height: 1px;
+  margin: 5px;
+}
+
+.SelectItemIndicator {
+  position: absolute;
+  left: 0;
+  width: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.SelectScrollButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  cursor: default;
+}
